@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Buyers.SettingActivity">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/setting_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        >
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            android:id="@+id/close_setting_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            />
+        <TextView
+            android:id="@+id/update_account_setting_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update"
+            android:layout_gravity="end"
+            android:layout_marginEnd="15dp"
+            />
+    </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/setting_profile_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/setting_appbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/profile"
+        app:civ_border_color="@color/colorPrimary"
+        />
+    <TextView
+        android:id="@+id/change_profile_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Profile"
+        android:layout_below="@+id/setting_profile_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        />
+    <EditText
+        android:id="@+id/setting_phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/change_profile_text"
+        android:layout_marginTop="30dp"
+        android:inputType="phone"
+        android:hint="Phone Number"
+        android:layout_margin="15dp"
+        />
+    <EditText
+        android:id="@+id/setting_full_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/setting_phone_number"
+        android:layout_marginTop="30dp"
+        android:hint="Full Name"
+        android:layout_margin="15dp"
+        />
+    <EditText
+        android:id="@+id/setting_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/setting_full_name"
+        android:layout_marginTop="30dp"
+        android:hint="Address"
+        android:layout_margin="15dp"
+        />
+
+    <Button
+        android:id="@+id/security_question_btn"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:hint="Set Security Question"
+        android:layout_below="@id/setting_address"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/button"
+        android:textColor="@color/colorWhite"
+        android:layout_centerHorizontal="true"
+        />
+</RelativeLayout>
